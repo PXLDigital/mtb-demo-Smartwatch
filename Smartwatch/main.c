@@ -45,6 +45,11 @@
 #include "cybsp.h"
 #include "cy_retarget_io.h"
 
+/* FreeRTOS */
+#include "FreeRTOS.h"
+#include "task.h"
+
+
 
 /*******************************************************************************
 * Macros

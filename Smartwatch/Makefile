@@ -79,7 +79,7 @@ VERBOSE=
 # ... then code in directories named COMPONENT_foo and COMPONENT_bar will be
 # added to the build
 #
-COMPONENTS=
+COMPONENTS=EMWIN_OSNTS FREERTOS LWIP MBEDTLS
 
 # Like COMPONENTS, but disable optional code that was enabled by default.
 DISABLE_COMPONENTS=
@@ -95,7 +95,8 @@ SOURCES=
 INCLUDES=
 
 # Add additional defines to the build process (without a leading -D).
-DEFINES=
+DEFINES+=CY_RETARGET_IO_CONVERT_LF_TO_CRLF CYBSP_WIFI_CAPABLE CY_RTOS_AWARE
+DEFINES+=MBEDTLS_USER_CONFIG_FILE='"configs/mbedtls_user_config.h"'
 
 # Select softfp or hardfp floating point. Default is softfp.
 VFP_SELECT=
